@@ -1,0 +1,104 @@
+.post_item{
+    background: white;
+    border: 1px solid #DBDBDB;
+    opacity: .8;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px;
+}
+.avatar_username_box{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    padding:10px 15px ;
+
+}
+
+.avatar_username{
+    display: flex;
+    justify-content:start ;
+    align-items: center;
+}
+
+.menu_svg{
+    width: 15px;
+    object-fit: contain;
+    filter: invert(1);
+}
+.avatar{
+    height: 50px;
+    width: 50px;
+    border: 1px solid green;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatarUsername{
+    padding-left: 10px;
+}
+
+.imgContainer{
+}
+
+.imgUpload{
+    width: 100%;
+    object-fit: contain;
+}
+
+.icon_container{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+
+.left_icon{
+    display: flex;
+    justify-content:flex-start ;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.right_icon{}
+
+.icons{
+    width: 32px;    
+    object-fit: contain;
+    padding-right: 10px;
+}
+
+
+
+.usename_caption{
+    display: flex;
+    padding: 10px 15px 0;
+
+}
+
+.comments{
+    padding-left: 15px;
+}
+
+.post_form{
+    display: flex;
+    padding: 6px;
+    border-top: 1px solid #EFEFEF ;
+}
+
+.input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    background: none;
+    color: green;
+    padding-right: 5px;
+}
+
+.btn:focus{
+    outline: none;
+}

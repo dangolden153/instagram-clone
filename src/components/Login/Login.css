@@ -1,0 +1,27 @@
+.login{
+    width: unset !important;
+}
+
+.login__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_img_box{
+    display: flex;
+    position: relative;
+}
+
+.login_img{
+    width: 364px;
+    object-fit: contain;
+}
+
+.img_overlay{
+    position: absolute;
+    top: 81px;
+    left: 121px;
+    width: 192px;
+    object-fit: contain;
+}
