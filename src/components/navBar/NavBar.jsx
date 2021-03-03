@@ -42,7 +42,8 @@ function NavBar({currentUser}) {
             </div>
 
           {state && <Modal  closeModal={closeModal} />}
-           <UploadModal open={modal} handleClose={close_Modal} /> 
+
+ <UploadModal currentUser={currentUser} open={modal} close_Modal={close_Modal} /> 
         </div>
     )
 }

@@ -1,0 +1,16 @@
+.modalcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.modal_icon{
+    color: white;
+    position: fixed;
+    top: 30px;
+    right: 84px;
+    font-size: 30px;
+    cursor: pointer;
+}

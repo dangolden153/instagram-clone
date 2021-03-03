@@ -1,19 +1,31 @@
 import React,{useState, useEffect} from 'react'
-import {auth} from '../firebase'
+import {auth, db_firestore} from '../firebase'
 import './Sign_up.css'
 import {Link} from 'react-router-dom'
 
 
 
-function Sign_up({toggleLoginLink}) {
+function Sign_up({}) {
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
+    const [profilePics, setProfilePics] = useState(null)
 
+    useEffect(()=>{
+        db_firestore.collection("user")
+        .onSnapshot(snapshot =>{
+            setProfilePics(snapshot.docs.map(doc=>doc.data()))
+            console.log(snapshot.docs.map(doc=>doc.data()))
+        })
+      },[setProfilePics])
+      
+      console.log(profilePics)
+    console.log(profilePics)
+   
     const handleSubmit = event =>{
         event.preventDefault()
-       auth().createUserWithEmailAndPassword(email,password)
+       auth.createUserWithEmailAndPassword(email,password)
         .then(response => {
             setUsername('')
             setEmail('')

@@ -8,7 +8,7 @@ function Story() {
         {
             id: 1,
             imageUrl: `${require('../pictures/onlyfans2.jpg')}`,
-            userName: 'Dan'
+            userName: 'Danlllllllllllllllllllll'
         },
 
         {
@@ -50,6 +50,10 @@ function Story() {
         },
     ]
 
+    const truncate =(str, n)=>{
+        return str?.length > n ? str.substr(0, n-1) + "..." : str;
+     }
+ 
 
     return (
         <div className='story'>
@@ -61,7 +65,7 @@ function Story() {
                         <div content={content} key={content.id} className="story_items">
                             <div className="display_container">
                             <img src={content.imageUrl} alt='...' className="story_img"/>
-                            <p className="story_username">{content.userName}</p>
+                            <p className="story_username">{truncate(content.userName, 10)}</p>
                             </div>
                         </div>
                     ))

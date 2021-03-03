@@ -1,16 +1,24 @@
 import React from 'react'
 import ImageUpload from '../imageUpload/ImageUpload'
 import Modal from '@material-ui/core/Modal'
-function UploadModal({open,handleClose}) {
+
+import  './uploadModal.css'
+import CloseIcon from '@material-ui/icons/Close';
+
+function UploadModal({open,close_Modal,currentUser}) {
     return (
         <div>
             <Modal
   open={open}
-  onClose={handleClose}
-  aria-labelledby="simple-modal-title"
-  aria-describedby="simple-modal-description"
+  onClose={close_Modal}
+ 
 >
-  {<ImageUpload />}
+  { 
+  <div className="modalcontainer">
+      <CloseIcon className='modal_icon' onClick={close_Modal}/>
+      <ImageUpload currentUser={currentUser.displayName} close_Modal={close_Modal}/>
+      </div>
+      }
 </Modal>
         </div>
     )

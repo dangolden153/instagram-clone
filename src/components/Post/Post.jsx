@@ -4,22 +4,30 @@ import {db_firestore} from '../firebase'
 
 import './Post.css'
 
-function Post() {
+function Post({currentUser}) {
     const [post, setPost] = useState([])
-    // const [postRef,  setchannelref ]= useState(firebase.database().ref('post'))
 
     useEffect(()=>{
         db_firestore.collection('post').orderBy('timeStamp', 'desc').onSnapshot(snapshot =>{
-            setPost(snapshot.docs.map(doc => doc.data()))
+            setPost(snapshot.docs.map(doc =>({ 
+                id:doc.id,
+                post: doc.data()
+            })))
         })
     },[setPost])
 
-    console.log(post)
+    
 
     return (
         <div className='post'>
           
-         {post.length > 0 && post.map(posts => <Post_Items key={posts.id}  posts={posts} />)   }
+         {post.length > 0 && post.map(({id, post}) => 
+         <Post_Items 
+         key={id} 
+         postId={id} 
+         posts={post} 
+         currentUser={currentUser}
+         />)   }
         </div>
     )
 }

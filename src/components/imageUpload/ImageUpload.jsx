@@ -1,10 +1,10 @@
 import React,{useState, useEffect} from 'react'
- import {storage,db_firestore} from '../firebase'
+ import {storage,db_firestore, auth,db} from '../firebase'
  import firebase from '../firebase'
 
 import './imageUpload.css'
 
-function ImageUpload({currentUser}) {
+function ImageUpload({currentUser,close_Modal}) {
     const [image, setImage] = useState(null)
     const [progress, setProgress] = useState(0)
     const [caption, setCaption] = useState('')
@@ -18,6 +18,9 @@ function ImageUpload({currentUser}) {
         }
     }
 
+   
+
+     
     const handleUpload =(e)=>{
         e.preventDefault()
         const uploadTask = storage.ref(`images/${image.name}`).put(image)
@@ -47,8 +50,11 @@ function ImageUpload({currentUser}) {
                 setProgress(0)
                 setCaption('')
                 setImage(null)
+                close_Modal()
+                
+              
             })
-            // .catch(err => console.log(err))
+            .catch(err => console.log(err))
         }
 
         )
@@ -56,15 +62,15 @@ function ImageUpload({currentUser}) {
     }
 
    
+   
 
     return (
-        <div className='imageUpload' margin-buttom='15px'>
-        <progress value={progress} max='100%' />
-        <input type="text" placeholder='Enter a caption..' onChange={e => setCaption(e.target.value)} value={caption} />
-        <input type="file" onChange={handleChange}/>
-        <button onClick={handleUpload} className="upload_imgBtn">Upload</button>
+        <div className='imageUpload' >
+        <progress value={progress} max='100%' className='imageUpload_progress' />
+        <textarea cols="30" rows="10" className='imageUpload_input' type="text" placeholder='write a caption..' onChange={e => setCaption(e.target.value)} value={caption} />
+        <input  type="file" onChange={handleChange}/>
+        <button className='imageUpload_btn' onClick={handleUpload} >Share</button>
 
-            
         </div>
     )
 }

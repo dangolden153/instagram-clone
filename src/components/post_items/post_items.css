@@ -62,8 +62,9 @@
 
 .icons{
     width: 32px;    
-    object-fit: contain;
     padding-right: 10px;
+    color: #5B5B5B;
+    font-size: 41px !important;
 }
 
 

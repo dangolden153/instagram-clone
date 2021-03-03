@@ -6,7 +6,7 @@ import NavBar from '../navBar/NavBar'
 import {auth} from '../firebase'
 import {Button} from '@material-ui/core';
 import InstagramEmbed from 'react-instagram-embed'
-import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
+
 
 import './home.css'
 
@@ -32,7 +32,7 @@ function Home() {
 
 
             <div className="container_left">
-            <Post />
+            <Post currentUser={currentUser}/>
             </div>
 
 
