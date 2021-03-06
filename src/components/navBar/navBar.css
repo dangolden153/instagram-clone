@@ -3,11 +3,15 @@
     background-color: white;
     border-top: 1px solid #DBDBDB;
     border-bottom: 1px solid #DBDBDB;
-    padding: 10px 151px;
+    padding: 10px 159px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 50;
+}
+
+.nav_bottom{
+    display: none;
 }
 
 .nav_container{
@@ -18,11 +22,14 @@
 }
 
 .ig_logo{
-    width: 90px;
+    width: 100px;
 }
 
 .right_icons{
     display: flex;
+    display: flex;
+    /* width: 100%; */
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -46,5 +53,40 @@
     border-radius: 7px;
 }
 .rotate_icon{
-    transform: rotate(-24deg);
+    transform: rotate(-24deg) translateY(-4px);
 }
+
+.unhide{
+    display: none !important;
+}
+
+
+
+@media screen and (max-width: 800px){
+    .nav{
+        padding: 10px;
+    }
+
+    .nav_bottom{
+        top: unset;
+        bottom: 0;
+        display: block;
+    }
+
+    .left_logo_media{
+        display: none;
+    }
+
+    .unhide{
+        display: block !important;
+    }
+
+    .hide{
+        display: none !important;
+    }
+
+    .right_icons_media{
+        width: unset;
+    }
+
+    }

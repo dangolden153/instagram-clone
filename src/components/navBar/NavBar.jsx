@@ -7,10 +7,9 @@ import AddIcon from '@material-ui/icons/Add'
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import SearchIcon from '@material-ui/icons/Search';
 import HomeIcon from '@material-ui/icons/Home';
-import PhotoCameraOutlinedIcon from '@material-ui/icons/PhotoCameraOutlined';
 import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
 import UploadModal from '../uploadModal/uploadModal'
-
+import CameraAltOutlinedIcon from '@material-ui/icons/CameraAltOutlined';
 import './navBar.css'
 
 function NavBar({currentUser}) {
@@ -25,9 +24,39 @@ function NavBar({currentUser}) {
     const close_Modal =()=> setModal(false)
 
     return ( 
+        <React.Fragment>
         <div className='nav'>
             <div className="nav_container">
+
+                <CameraAltOutlinedIcon className='nav_icon unhide' onClick={openModal}/>
+
                 <Link to='/' className="left_logo">
+                    <img src={ig} alt="instagram" className="ig_logo"/>
+                    </Link>
+
+                <div className="right_icons right_icons_media">
+                    <HomeIcon className='nav_icon hide'/>
+                    <SendOutlinedIcon className='nav_icon rotate_icon'/>
+                    <AddIcon className='nav_icon border hide' onClick={openModal}/>
+                    <FavoriteBorderIcon className='nav_icon hide'/>
+                    <img src={currentUser && currentUser.photoURL}  onClick={toggleModal} alt="profile pics" className="navProfile_pics hide"/>
+                </div>
+
+            </div>
+
+          {state && <Modal  closeModal={closeModal} />}
+
+ <UploadModal currentUser={currentUser} open={modal} close_Modal={close_Modal} /> 
+        </div>
+
+
+
+
+
+
+        <div className='nav nav_bottom'>
+            <div className="nav_container">
+                <Link to='/' className="left_logo left_logo_media">
                     <img src={ig} alt="instagram" className="ig_logo"/>
                     </Link>
 
@@ -45,6 +74,7 @@ function NavBar({currentUser}) {
 
  <UploadModal currentUser={currentUser} open={modal} close_Modal={close_Modal} /> 
         </div>
+        </React.Fragment>
     )
 }
 

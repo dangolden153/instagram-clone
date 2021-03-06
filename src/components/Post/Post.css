@@ -3,3 +3,9 @@
     width: 557px;
     margin-right: 15px; 
 }
+
+@media screen and (max-width: 800px){
+    .post{
+        width: 100%;
+    }
+    }

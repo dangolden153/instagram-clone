@@ -103,3 +103,10 @@
 .btn:focus{
     outline: none;
 }
+
+@media screen and (max-width: 800px){
+    .post_item{
+        margin: unset;
+        width: unset;
+    }
+    }

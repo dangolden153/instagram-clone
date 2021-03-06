@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import {auth} from '../firebase'
 import login_img from '../pictures/login-img.png'
 import img_overlay from '../pictures/login-overlay.jpg'
+import logo from '../pictures/ig_logo.png'
 
 import './Login.css'
 
@@ -35,7 +36,7 @@ function Login({toggleLink}) {
         <div className="sign-up login">
 
             <div className="signUp_container login">
-                <h2 className="signUp_header">Instagram</h2>
+            <img src={logo} alt='instagram logo' className="ig_logo_auth" />
             <form onSubmit={handleSubmit} className="signUp_form">
 
                 <input type="email"

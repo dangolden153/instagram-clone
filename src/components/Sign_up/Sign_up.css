@@ -70,8 +70,9 @@
     color: black;
     font-size: 13px;
     border: 1px solid #DBDBDB;
-    padding: 19px 63px;
+    padding: 12px;
     margin: 20px;
+    width: 100%;
 }
 
 .boldLink{
@@ -93,6 +94,20 @@
     outline: none;
 }
 
-.sign__up{
+/* .sign__up{
     padding: 19px 81px;
-}
+} */
+
+@media screen and (max-width: 800px){
+    .signUp_container{
+        padding: 70px 37px;
+    }
+
+    .sign-up{
+        width: 280px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+   
+    }

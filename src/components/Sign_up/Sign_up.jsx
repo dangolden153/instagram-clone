@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react'
 import {auth, db_firestore} from '../firebase'
 import './Sign_up.css'
 import {Link} from 'react-router-dom'
+import logo from '../pictures/ig_logo.png'
 
 
 
@@ -50,7 +51,7 @@ function Sign_up({}) {
 
             <div className="signUp_container">
                 
-                <h2 className="signUp_header">Instagram</h2>
+                <img src={logo} alt='instagram logo' className="ig_logo_auth" />
             <form  className="signUp_form">
 
             <input type="text"
@@ -82,7 +83,7 @@ function Sign_up({}) {
             </div>
 
             <div className="signUp_link sign__up">
-                New to Netflix? <Link to='/login' className='boldLink'>Login in</Link>
+                Already have an account ? <Link to='/login' className='boldLink'>Login in</Link>
             </div>
 
             <p className="error">{error}</p>

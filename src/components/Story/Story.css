@@ -9,13 +9,14 @@
     display: flex;
     width: 558px;
     border: 1px solid #DBDBDB;
-    justify-content: center;
     padding: 20px;
     
 }
 
 .story_sub_cont{
-    width: 500px;
+    position: relative;
+
+    /* width: 500px; */
     overflow: hidden;
     display: flex;
     justify-content: start;
@@ -48,3 +49,51 @@
     font-weight: 500;
     font-size: 12px;
     margin-top: 5px;}
+
+    .add_story_btn{
+        border: none;
+        background: none;
+        outline: none;
+    }
+
+    .add_story{
+        position: relative;
+    }
+
+    
+    .add_icon{
+        position: absolute;
+        color: #00aff0 !important;
+        bottom: 22px;
+        right: -4px;
+        border: 1px solid white;
+        border-radius: 50%;
+        background: white;
+    }
+
+    @media screen and (max-width: 800px){
+        .story{
+            margin: unset;
+        }
+        .story_container{
+            width: 299px;
+            padding: 10px;
+            border: unset;
+        }
+
+        .story_img{
+            width: 58px;
+            height: 58px;
+        }
+
+        .add_story{
+            width: 58px;
+            height: 58px;
+           
+        }
+
+        .add_icon{
+            bottom: -2px;
+            right: -8px;
+        }
+    }

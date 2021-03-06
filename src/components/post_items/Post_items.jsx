@@ -87,8 +87,8 @@ function Post_Items({posts,postId,currentUser}) {
 
            {/* // caption */}
         <div className="usename_caption">
-        <p className="captionUsername"><strong>{currentUser.displayName}</strong></p>
-         <p className="avatarUsername">{caption}</p>
+        <p className="captionUsername"><strong>{currentUser.displayName}</strong>{' '} {caption}</p>
+         {/* <p className="avatarUsername"></p> */}
             </div>
 
 

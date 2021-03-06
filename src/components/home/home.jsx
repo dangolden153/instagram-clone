@@ -26,7 +26,7 @@ function Home() {
 
     return (
         <div className='home' >
-            <Story/>
+            <Story currentUser={currentUser}/>
 
             <div className="container__display">
 

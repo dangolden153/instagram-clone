@@ -25,3 +25,21 @@
     width: 192px;
     object-fit: contain;
 }
+
+.ig_logo_auth{
+    width: 115px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 800px){
+    .login_img_box{
+        display: none !important;
+    }
+
+   
+
+    .login{
+        width: 280px !important;
+    }
+    }
