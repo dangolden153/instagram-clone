@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import Spinner from '../Spinner'
 import {Link} from 'react-router-dom'
 import {auth} from '../firebase'
 import login_img from '../pictures/login-img.png'
@@ -11,23 +12,30 @@ function Login({toggleLink}) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
+    const [loading, setLoading] = useState(false)
 
     const handleSubmit = event =>{
+        setLoading(true)
         event.preventDefault()
         auth.signInWithEmailAndPassword(email, password)
         .then(response =>{
             console.log(response)
             setEmail('')
             setPassword('')
+            setLoading(false)
         })
         .catch(err =>{
             setError(err.message)
+            setLoading(false)
         })
         
     }
 
     return (
 
+        <React.Fragment>
+            {loading && <Spinner />}
+            
         <div className="login__container">
             <div className="login_img_box">
             <img src={login_img} alt="..." className="login_img"/>
@@ -65,6 +73,7 @@ function Login({toggleLink}) {
             <p className="error">{error}</p>
             </div>
         </div>
+        </React.Fragment>
     )
 }
 

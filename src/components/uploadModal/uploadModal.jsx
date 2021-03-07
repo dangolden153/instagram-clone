@@ -16,7 +16,7 @@ function UploadModal({open,close_Modal,currentUser}) {
   { 
   <div className="modalcontainer">
       <CloseIcon className='modal_icon' onClick={close_Modal}/>
-      <ImageUpload currentUser={currentUser.displayName} close_Modal={close_Modal}/>
+      <ImageUpload currentUser={currentUser && currentUser.displayName} close_Modal={close_Modal}/>
       </div>
       }
 </Modal>

@@ -3,8 +3,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    width: 27%;
     height: 100vh;
+    margin: 0 auto;
 }
 
 
@@ -16,6 +17,7 @@
     justify-content: center;
     align-items: center;
     padding: 70px 50px;
+    width: 100%;
 }
 
 .signUp_header{

@@ -40,7 +40,7 @@ const App =()=>{
 
 
   <div className='App'>
-  {currentUser && <NavBar currentUser={currentUser} />}
+  {/* {currentUser && } */}
   <Switch>
 
 
@@ -69,5 +69,8 @@ export default App;
 /// 7 ability to upload a post  ..../
 /// 8 to comment on a post  ..../
 /// 10 ability to update profile picture  
-/// 11 ability to update a story
+/// 11 ability to update a story .../
 /// 12 user should be able to see all his/her posts
+
+/// hide navbar during logout session
+/// spinner .../

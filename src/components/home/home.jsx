@@ -16,7 +16,6 @@ function Home() {
     useEffect(()=>{
      auth.onAuthStateChanged(user => {
           if(user){
-              console.log(user)
               setCurrentUser(user)
           } else {
               console.log('no users')
@@ -24,8 +23,11 @@ function Home() {
       })
   },[setCurrentUser])
 
+  console.log(currentUser && currentUser.uid)
     return (
         <div className='home' >
+                <NavBar currentUser={currentUser} />
+
             <Story currentUser={currentUser}/>
 
             <div className="container__display">

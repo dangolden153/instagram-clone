@@ -74,10 +74,11 @@
     @media screen and (max-width: 800px){
         .story{
             margin: unset;
+            width: 99vw;
         }
         .story_container{
-            width: 299px;
-            padding: 10px;
+            width: 100%;
+            padding: 12px 0;
             border: unset;
         }
 

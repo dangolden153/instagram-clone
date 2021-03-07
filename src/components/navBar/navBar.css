@@ -89,4 +89,7 @@
         width: unset;
     }
 
+    .right__media{
+        width: 100%;
+    }
     }

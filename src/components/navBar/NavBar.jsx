@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react'
-import Modal from '../Modal/Modal'
+import Modal_box from '../Modal/Modal'
 import {Link} from 'react-router-dom'
 import profile from '../pictures/account.svg'
 import ig from '../pictures/ig_logo.png'
@@ -23,6 +23,8 @@ function NavBar({currentUser}) {
     const openModal =()=> setModal(true)
     const close_Modal =()=> setModal(false)
 
+
+
     return ( 
         <React.Fragment>
         <div className='nav'>
@@ -44,7 +46,7 @@ function NavBar({currentUser}) {
 
             </div>
 
-          {state && <Modal  closeModal={closeModal} />}
+         <Modal_box state={state} currentUser={currentUser} closeModal={closeModal} />
 
  <UploadModal currentUser={currentUser} open={modal} close_Modal={close_Modal} /> 
         </div>
@@ -60,7 +62,7 @@ function NavBar({currentUser}) {
                     <img src={ig} alt="instagram" className="ig_logo"/>
                     </Link>
 
-                <div className="right_icons">
+                <div className="right_icons right__media">
                     <HomeIcon className='nav_icon'/>
                     <SendOutlinedIcon className='nav_icon rotate_icon'/>
                     <AddIcon className='nav_icon border' onClick={openModal}/>
@@ -70,7 +72,7 @@ function NavBar({currentUser}) {
 
             </div>
 
-          {state && <Modal  closeModal={closeModal} />}
+         <Modal_box state={state} closeModal={closeModal} />
 
  <UploadModal currentUser={currentUser} open={modal} close_Modal={close_Modal} /> 
         </div>

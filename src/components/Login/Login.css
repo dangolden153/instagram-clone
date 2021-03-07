@@ -1,11 +1,12 @@
 .login{
-    width: unset !important;
+    margin: unset !important;
 }
 
 .login__container{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .login_img_box{
