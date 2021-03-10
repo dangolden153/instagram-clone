@@ -1,0 +1,62 @@
+.card{
+    margin: 84px auto;
+    padding: 42px 5px;    
+    border: 1px solid indigo;
+    border-radius: 6px;
+    width: 281px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bac_position{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    background: lightcoral;
+    width: 100%;
+}
+.card_container{
+    padding: 40px 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile_img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid hotpink;
+    z-index: 100;
+}
+.profile_details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+    /* justify-content: space-between; */
+}
+
+.name{}
+
+.location{}
+
+.like_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 25px;
+}
+
+.header_text_like{
+    display: flex;
+    align-items: center;
+    flex-direction: column;}
+
+.like_header{}
+
+.like_text{}

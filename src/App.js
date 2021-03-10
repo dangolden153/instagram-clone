@@ -4,6 +4,7 @@ import NavBar from './components/navBar/NavBar'
 import Auth_page from './components/auth_page/Auth_page'
 import Login from './components/Login/Login'
 import Sign_up from './components/Sign_up/Sign_up'
+import Card from './components/Card/Card'
 import ImageUpload from './components/imageUpload/ImageUpload'
 import {auth,db_firestore} from './components/firebase'
 import {Switch, Route, useHistory} from 'react-router-dom'
@@ -17,19 +18,19 @@ const App =()=>{
 
   const history = useHistory()
 
-  useEffect(()=>{
-   auth.onAuthStateChanged(user => {
-        if(user){
-            history.push('/')
-            console.log(user)
-            setCurrentUser(user)
+//   useEffect(()=>{
+//    auth.onAuthStateChanged(user => {
+//         if(user){
+//             history.push('/')
+//             console.log(user)
+//             setCurrentUser(user)
             
-        } else {
-            history.push('/auth')
-            console.log('no users')
-        }
-    })
-},[setCurrentUser])
+//         } else {
+//             history.push('/auth')
+//             console.log('no users')
+//         }
+//     })
+// },[setCurrentUser])
 
 
 
@@ -45,6 +46,7 @@ const App =()=>{
 
 
   <Route path='/' exact component={Home} />
+  <Route path='/card' exact component={Card} />
 
   <Route path='/auth' component={Auth_page} />
   <Route path='/login' component={Login} />
@@ -64,13 +66,12 @@ export default App;
 /// 4 style the comment section approprately        .../
 /// 5 profile modal         .../
 /// 9 create a story component at the top of post component ../
-
 /// 6 firebase integration ...../
 /// 7 ability to upload a post  ..../
 /// 8 to comment on a post  ..../
-/// 10 ability to update profile picture  
 /// 11 ability to update a story .../
-/// 12 user should be able to see all his/her posts
+/// 14 spinner .../
+/// 13 hide navbar during logout session
 
-/// hide navbar during logout session
-/// spinner .../
+/// 12 user should be able to see all his/her posts
+/// 10 ability to update profile picture  

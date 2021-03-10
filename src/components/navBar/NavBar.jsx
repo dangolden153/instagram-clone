@@ -41,7 +41,7 @@ function NavBar({currentUser}) {
                     <SendOutlinedIcon className='nav_icon rotate_icon'/>
                     <AddIcon className='nav_icon border hide' onClick={openModal}/>
                     <FavoriteBorderIcon className='nav_icon hide'/>
-                    <img src={currentUser && currentUser.photoURL}  onClick={toggleModal} alt="profile pics" className="navProfile_pics hide"/>
+                    <img src={currentUser && currentUser.photoURL}  alt="profile pics" className="navProfile_pics hide"/>
                 </div>
 
             </div>
@@ -67,7 +67,7 @@ function NavBar({currentUser}) {
                     <SendOutlinedIcon className='nav_icon rotate_icon'/>
                     <AddIcon className='nav_icon border' onClick={openModal}/>
                     <FavoriteBorderIcon className='nav_icon'/>
-                    <img src={currentUser && currentUser.photoURL}  onClick={toggleModal} alt="profile pics" className="navProfile_pics"/>
+                    <img src={currentUser && currentUser.photoURL}   alt="profile pics" className="navProfile_pics"/>
                 </div>
 
             </div>

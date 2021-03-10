@@ -88,12 +88,12 @@ function Story({currentUser}) {
                         display :'none'
                     }}
                     />
-                    <div className="display_container">
-                    <button className="add_story_btn" onClick={imgUpload_Picker}>
+                    <div className="display_container" onClick={imgUpload_Picker}>
+                   
                             <img src={currentUser && currentUser.photoURL} alt='...' className="story_img"/>
                            < AddCircleIcon className='add_icon'/>
                             <p className="story_username">{truncate('Your Story', 10)}</p>
-                            </button>
+                        
                          </div>
                            
                 </div>

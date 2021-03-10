@@ -23,7 +23,7 @@ function Home() {
       })
   },[setCurrentUser])
 
-  console.log(currentUser && currentUser.uid)
+ 
     return (
         <div className='home' >
                 <NavBar currentUser={currentUser} />
