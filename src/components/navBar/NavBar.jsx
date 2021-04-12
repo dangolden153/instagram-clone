@@ -10,7 +10,11 @@ import HomeIcon from '@material-ui/icons/Home';
 import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
 import UploadModal from '../uploadModal/uploadModal'
 import CameraAltOutlinedIcon from '@material-ui/icons/CameraAltOutlined';
+import {Avatar} from '@material-ui/core'
+
 import './navBar.css'
+
+
 
 function NavBar({currentUser}) {
     const [state, setState] = useState(false)
@@ -20,7 +24,7 @@ function NavBar({currentUser}) {
     const toggleModal =()=> setState(!state)
     const closeModal =()=> setState(false)
 
-    const openModal =()=> setModal(true)
+    const openModal =()=> setModal(true) 
     const close_Modal =()=> setModal(false)
 
 
@@ -72,7 +76,7 @@ function NavBar({currentUser}) {
 
             </div>
 
-         <Modal_box state={state} closeModal={closeModal} />
+         {/* <Modal_box state={state} closeModal={closeModal} /> */}
 
  <UploadModal currentUser={currentUser} open={modal} close_Modal={close_Modal} /> 
         </div>

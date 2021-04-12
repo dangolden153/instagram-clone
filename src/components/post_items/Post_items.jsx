@@ -67,7 +67,6 @@ function Post_Items({posts,postId,currentUser}) {
         {/*  imgUpload */}
          <div className="imgContainer">
         <img src={imgUrl} alt="..." className="imgUpload"/>
-        {/* {console.log(imgUrl)} */}
         </div> 
 
         {/* icons: like, bookmark etc */}
@@ -87,7 +86,7 @@ function Post_Items({posts,postId,currentUser}) {
 
            {/* // caption */}
         <div className="usename_caption">
-        <p className="captionUsername"><strong>{currentUser.displayName}</strong>{' '} {caption}</p>
+        <p className="captionUsername"><strong>{username}</strong>{' '} {caption}</p>
          {/* <p className="avatarUsername"></p> */}
             </div>
 

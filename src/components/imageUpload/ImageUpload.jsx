@@ -8,6 +8,8 @@ function ImageUpload({currentUser,close_Modal}) {
     const [image, setImage] = useState(null)
     const [progress, setProgress] = useState(0)
     const [caption, setCaption] = useState('')
+    const [name, setName] = useState('')
+
     const [post, setPost] = useState([])
 
    
@@ -67,6 +69,7 @@ function ImageUpload({currentUser,close_Modal}) {
     return (
         <div className='imageUpload' >
         <progress value={progress} max='100%' className='imageUpload_progress' />
+        {/* <input  type="text" value={name} onChange={e => setName(e.target.value)} placeholder='name' /> */}
         <textarea cols="30" rows="10" className='imageUpload_input' type="text" placeholder='write a caption..' onChange={e => setCaption(e.target.value)} value={caption} />
         <input  type="file" onChange={handleChange}/>
         <button className='imageUpload_btn' onClick={handleUpload} >Share</button>

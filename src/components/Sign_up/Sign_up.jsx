@@ -34,16 +34,16 @@ function Sign_up({}) {
 
             .then(res =>{
                 console.log(res)
-                db.ref('users')
-                .child(response.user.uid)
-                .set({
-                    username: response.user.displayName,
-                    avatar : response.user.photoURL
-                })
+                // db.ref('users')
+                // .child(response.user.uid)
+                // .set({
+                //     username: response.user.displayName,
+                //     avatar : response.user.photoURL
+                // })
 
 
-                .then(res => console.log(res))
-                .catch(err => console.log(err))
+                // .then(res => console.log(res))
+                // .catch(err => console.log(err))
                 
             })  .catch(err => console.log(err))
 

@@ -18,19 +18,19 @@ const App =()=>{
 
   const history = useHistory()
 
-//   useEffect(()=>{
-//    auth.onAuthStateChanged(user => {
-//         if(user){
-//             history.push('/')
-//             console.log(user)
-//             setCurrentUser(user)
+  useEffect(()=>{
+   auth.onAuthStateChanged(user => {
+        if(user){
+            history.push('/')
+            console.log(user)
+            setCurrentUser(user)
             
-//         } else {
-//             history.push('/auth')
-//             console.log('no users')
-//         }
-//     })
-// },[setCurrentUser])
+        } else {
+            history.push('/auth')
+            console.log('no users')
+        }
+    })
+},[setCurrentUser])
 
 
 
